@@ -1,0 +1,32 @@
+{
+  "name": "noteappas_backend",
+  "version": "1.0.0",
+  "description": "This a note app as a backend use ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahir51002/NoteappAs_Backend.git"
+  },
+  "keywords": [
+    "use",
+    "node",
+    "ejs",
+    "file",
+    "system",
+    "express"
+  ],
+  "author": "mahir lad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahir51002/NoteappAs_Backend/issues"
+  },
+  "homepage": "https://github.com/Mahir51002/NoteappAs_Backend#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

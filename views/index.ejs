@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="main min-h-screen min-w-screen bg-zinc-900 text-white">
+        <div class="title-setup mb-10 text-center">    
+            <h1 class="text-center text-3xl p-5">Welcome to Notes One</h1>
+            <p class="text-center text-m p-1">Here you can create, edit, and delete your notes easily.</p>
+        </div>
+        <div class="form-setup" >
+            <form action="/create" method="post">
+                <input type="text" name="fileName" id="" placeholder="Enter note title" class="block w-3/4 rounded-md px-5 py-2 m-auto bg-zinc-800 mb-2">
+                <textarea name="details" id="" placeholder="Enter description here..." class="block w-3/4 rounded-md px-5 py-2 m-auto bg-zinc-800 mb-2 resize-none"></textarea>
+                <div class="flex justify-center">
+                    <input type="submit" class="w-1/6 text-blue-500 px-5 py-2 bg-zinc-800 rounded-md" value="Create Note">
+                </div>
+            </form>
+        </div>
+        <div class="note-create flex gap-3 p-10 flex-wrap justify-center ">
+            <% if(files.length>0){ %>
+                <% files.forEach(file=>{ %>
+                <div class="note-card bg-zinc-800 p-5 rounded-md w-1/4">
+                <h2 class=" text-white text-3xl tracking-tighter"><%= file %></h2>
+                <a class="text-blue-500  inline-block mt-3" href="/files/<%=file%>">read more</a>
+            </div>    
+            <% }) %>
+            <% }else{ %>
+                <h2 class="text-zinc-600">No notes here.</h2>
+            <% } %>
+            
+        </div>
+    </div>
+</body>
+</html>
